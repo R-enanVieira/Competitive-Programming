@@ -6,22 +6,20 @@ int main(){
   ios::sync_with_stdio(false);
   
   string dna;
+  vector<int> tam;
   cin >> dna;
-  bool flag = false;
-  int cont = 1, aux = 0;
+  int cont = 1;
   for(int i = 1; i < dna.length(); i++) {
     if(dna[i-1] == dna[i]){
       cont++;
     }else {
-      if(cont >= aux) {
-        aux = cont;
-        cont = 1;
-        //flag = true;
-      }
+      tam.push_back(cont);
+      cont = 1;
     }
   }
-  if(cont > aux) cout << cont << endl;
-  else cout << aux << endl;
+  tam.push_back(cont);
+  auto ans = max_element(tam.begin(), tam.end());
+  cout << *ans << endl;
 
   return 0;
 }
