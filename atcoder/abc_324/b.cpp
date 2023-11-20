@@ -13,7 +13,15 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-   
-
+  ll n; cin >> n;
+  int ans_x = 0, ans_y = 0;
+  
+  while(n > 1) {
+    if(!(n%2)) {n /= 2; ans_x++;}
+    else if(!(n%3)) {n /= 3; ans_y++;}
+    else {cout << "No" << ln; return 0;}
+  }
+  cout << "Yes" << ln;
   return 0;
 }
+

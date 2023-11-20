@@ -13,7 +13,19 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-   
+  string s; cin >> s;
+  for (int i = 0; i < s.size(); i++) {
+    if((i+1)%2 == 0 && (s[i] == 'R')) {
+      cout << "No" << endl;
+      return 0;
+    }
+    if((i+1)%2 && (s[i] == 'L')) {
+      cout << "No" << endl;
+      return 0;
+    }
+  }
+  cout << "Yes" << ln;
 
   return 0;
 }
+

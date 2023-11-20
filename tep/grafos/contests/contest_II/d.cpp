@@ -13,7 +13,19 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-   
+  int n, k, q; cin >> n >> k >> q;
+  vi p(n+1, 0);
+
+  for (int i = 0; i < q; i++) {
+      int a; cin >> a;
+      p[a]++;
+    }
+    for (int i = 1; i <= n; i++) {
+      cout << (k+(p[i]-q) >= 1 ? "Yes" : "No");
+    cout << ln;
+  }
+  
 
   return 0;
 }
+

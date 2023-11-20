@@ -13,7 +13,14 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-   
+  vector<string> w = {"Sunny", "Cloudy", "Rainy"};
+  string s; cin >> s;
+
+  for (int i = 0; i < w.size(); i++) {
+    if(s == w[i] && i == 2) cout << w[0] << ln;
+    else if(s == w[i]) cout << w[i+1] << ln;
+  }
 
   return 0;
 }
+

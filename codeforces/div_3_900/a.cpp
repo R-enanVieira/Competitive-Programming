@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int oo = 1e9;
-
 using ll = long long;
 using ii = pair<int, int>;
 using edge = tuple<int, int, int>;
@@ -13,7 +11,17 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-   
+  int t; cin >> t;
+  while(t--) {
+    int n, k; cin >> n >> k;
+    vi v(n);
+    for (int i = 0; i < n; i++) {
+      cin >> v[i];
+    }
+    cout << (find(v.begin(), v.end(), k) != v.end() ? "YES" : "NO");
+    cout << ln;
+  }
 
   return 0;
 }
+
