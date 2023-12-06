@@ -13,6 +13,20 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
+  int n;
+  cin >> n;
+  string s;
+  cin >> s;
+
+  int cnt = 0, m = 0;
+  for (int i = 0; i < n; i++) {
+    if (s[i] == 'A')
+      if (i + 1 < n && s[i + 1] == 'B')
+        if (i + 2 < n && s[i + 2] == 'C') cnt++;
+  }
+
+  cout << cnt;
+  cout << ln;
 
   return 0;
 }

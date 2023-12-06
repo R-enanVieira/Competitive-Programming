@@ -14,5 +14,13 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
+  int n, m;
+  cin >> n >> m;
+
+  vi A(n);
+  for (auto& x : A) cin >> x;
+
+  sort(A.begin(), A.end());
+
   return 0;
 }

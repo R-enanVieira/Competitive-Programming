@@ -13,6 +13,10 @@ typedef vector<int> vi;
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
+  int x, k;
+  cin >> x >> k;
+  cout << (500 * x >= k ? "Yes" : "No");
+  cout << ln;
 
   return 0;
 }
